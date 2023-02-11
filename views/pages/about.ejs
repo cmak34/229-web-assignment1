@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- here is the head -->
+  <%- include ../partial/head.ejs %>
+  <body>
+    <!-- here is the header -->
+    <%- include ../partial/header.ejs %>
+    <!-- body of the page -->
+    <div class="bg-container container about">
+      <div id="aboutBanner" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#aboutBanner" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img class="img-fluid d-block rounded-4 w-100" src="/images/about.jpg" alt="">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="text-start fw-bold fs-1 text-dark">Business blends <br />Tech and Design</h5>
+              <p class="text-start fw-light fs-5 text-black-50">From marketer to designer, developer to AI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid py-5">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-4">
+            <div class="p-5">
+              <div class="d-flex justify-content-center">
+                <div class="col-md-12">
+                  <img class="img-fluid mx-auto d-block rounded-circle" src="/images/hugo.jpeg" alt="Resume">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-8">
+            <div class="p-1">
+              <h2 class="display-5 text-start fw-bold fs-2 text-dark">About Hugo</h2>
+              <p class="text-start fw-light fs-5 text-black-50">
+                My name is Hugo Mak (Chung Ping MAK) and I am a highly motivated individual with a unique blend of
+                business acumen and design expertise. My background in business and design, along with my passion for
+                detail and aesthetics, has allowed me to bring a human-centered approach to the development of various
+                web and mobile applications. Through years of self-taught programming, I have become a skilled
+                programmer and have had the opportunity of leading a programming team to work with well-known
+                companies, educational institutions, and professional associations in Hong Kong. I am the founder of
+                my own digital agency and have extensive experience in web and mobile application development. As a
+                serial entrepreneur, programmer, and businessman, I am always looking for new challenges and
+                opportunities to grow. Currently, I am furthering my education in AI at Centennial College, eager to
+                stay ahead of the curve and bring cutting-edge solutions to my clients.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid py-5">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-6">
+            <div class="p-5">
+              <div class="d-flex justify-content-center">
+                <div class="col-md-8">
+                  <h2 class="display-5 text-start fw-bold fs-2 text-dark">Resume</h2>
+                  <p class="text-start fw-light fs-5 text-black-50">
+                    I am always seeking new challenges and opportunities for growth. Please refer to my CV for further
+                    details.
+                    <br>
+                    <a class="mt-3 btn btn-dark" target="_blank" href="/doc/hugo-mak-cv.pdf">Resume</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6">
+            <img class="img-fluid mx-auto d-block" src="/images/vacant.png" alt="Resume">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- here is the footer -->
+    <%- include ../partial/footer.ejs %>
+    <!-- here are the js script -->
+    <%- include ../partial/script.ejs %>
+  </body>
+</html>

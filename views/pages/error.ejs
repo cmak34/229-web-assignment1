@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- here is the head -->
+  <%- include ../partial/head.ejs %>
+  <body>
+    <!-- here is the header -->
+    <%- include ../partial/header.ejs %>
+    <!-- body of the page -->
+      <div class="bg-container container">
+        <div id="errorBanner" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#errorBanner" data-bs-slide-to="0" class="active" aria-current="true"
+              aria-label="Slide 1"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+              <img class="img-fluid d-block rounded-4 w-100" src="/images/error.jpg" alt="">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="text-start fw-bold fs-1 text-dark">Oops!</h5>
+                <p class="text-start fw-light fs-5 text-black-50">Somethings went wrong here.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="p-4 h-100">
+              <h2 class="text-center display-5 text-start fw-bold fs-2 text-dark"><%= (typeof title !== 'undefined') ? title : 'Unknown page' %></h2>
+              <% if (typeof error !== 'undefined') { %>
+              <p class="text-center text-start fw-light fs-5 text-black-50"><%= error %></p>
+              <p class="text-center text-start fw-light fs-5 text-black-50">To help us debug, please report the problem at <a href="/contact">contact</a> page</p>
+              <% } else { %>
+              <p class="text-center text-start fw-light fs-5 text-black-50">The page you are looking for is gone.</p>
+              <p class="text-center text-start fw-light fs-5 text-black-50">Please click here to return to the <a href="/">home</a> page</p>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- here is the footer -->
+    <%- include ../partial/footer.ejs %>
+    <!-- here are the js script -->
+    <%- include ../partial/script.ejs %>
+  </body>
+</html>

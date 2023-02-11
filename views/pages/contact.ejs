@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- here is the head -->
+  <%- include ../partial/head.ejs %>
+  <body>
+    <!-- here is the header -->
+    <%- include ../partial/header.ejs %>
+    <!-- body of the page -->
+    <div class="bg-container container">
+      <div id="contactBanner" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#contactBanner" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img class="img-fluid d-block rounded-4 w-100" src="/images/contact.jpg" alt="Enquiry">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="text-start fw-bold fs-1 text-dark">Business? Questions?</h5>
+              <p class="text-start fw-light fs-5 text-black-50">Feel free to text me.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-6">
+            <div class="p-5">
+              <img class="img-fluid mx-auto d-block" src="/images/contact-form.png" alt="Contact form">
+              <h2 class="display-5 text-center fw-bold fs-2 text-dark">Enquiry</h2>
+              <div class="d-flex justify-content-center">
+                <div class="col-md-8 ">
+                  <p class="text-center fw-light fs-5 text-black-50">
+                    I'll reply you shortly
+                  </p>
+                  <h6 class="text-center fw-bold fs-5 text-dark"><i class="bi bi-envelope"></i> Email:</h6>
+                  <p class="text-center fw-light fs-5 text-black-50">cmak34 at my.centennialcollege.ca</p>
+                  <h6 class="text-center fw-bold fs-5 text-dark"><i class="bi bi-telephone"></i> Phone:</h6>
+                  <p class="text-center fw-light fs-5 text-black-50">+1 647 717 4088 <br />+852 2660 7788</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6">
+            <form id="contactForm" class="p-3">
+              <div class="mb-3">
+                <label for="type" class="form-label">Type of Enquiry</label>
+                <select id="type" class="form-select form-select-lg" required>
+                  <option value="business" selected>Business</option>
+                  <option value="question">Question</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="firstname" class="form-label">Your First Name</label>
+                <input type="text" class="form-control form-control-lg" id="firstname" required>
+              </div>
+              <div class="mb-3">
+                <label for="lastname" class="form-label">Your Last Name</label>
+                <input type="text" class="form-control form-control-lg" id="lastname" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control form-control-lg" id="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="tel" class="form-label">Contact Number</label>
+                <input type="tel" class="form-control form-control-lg" id="tel" required
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="647-123-1234">
+              </div>
+              <div class="mb-3">
+                <label for="content" class="form-label">Message</label>
+                <textarea id="content" class="form-control form-control-lg" name="content" cols="30" rows="4"
+                  required></textarea>
+              </div>
+              <div class="text-end">
+                <button type="submit" class="btn btn-dark">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- here is the footer -->
+    <%- include ../partial/footer.ejs %>
+    <!-- here are the js script -->
+    <%- include ../partial/script.ejs %>
+  </body>
+</html>

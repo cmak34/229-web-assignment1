@@ -1,0 +1,24 @@
+{
+  "name": "express-porfolio-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "patch": "npm --no-git-tag-version version patch && say 'Update patch version'",
+    "minor": "npm --no-git-tag-version version minor && say 'Update minor version'",
+    "major": "npm --no-git-tag-version version major && say 'Update major version'",
+    "start": "nodemon server"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.3",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "mongoose": "^6.9.0",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

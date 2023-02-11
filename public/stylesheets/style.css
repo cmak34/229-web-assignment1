@@ -1,0 +1,32 @@
+/**
+ * File name: custom.js
+ * Student's name: Chung Ping Mak
+ * Student ID: 301281670
+ * Date 9 Feb 2023
+ */
+ 
+body {
+  background-color: whitesmoke;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.home .pointer:hover {
+  box-shadow: 0 0 10px #bbb;
+  transform: scale(0.95);
+  transition: transform 0.3s ease-in-out;
+}
+
+.home .pointer:hover img {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.home .pointer:hover p,
+.home .pointer:hover h2 {
+  transform: scale(0.8);
+  transition: transform 0.3s ease-in-out;
+}

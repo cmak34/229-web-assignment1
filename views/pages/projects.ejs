@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- here is the head -->
+  <%- include ../partial/head.ejs %>
+  <body>
+    <!-- here is the header -->
+    <%- include ../partial/header.ejs %>
+    <!-- body of the page -->
+    <div class="bg-container container projects">
+      <div id="projectsBanner" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#projectsBanner" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img class="img-fluid d-block rounded-4 w-100" src="/images/projects.jpg" alt="">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="text-start fw-bold fs-1 text-dark">Previous Projects</h5>
+              <p class="text-start fw-light fs-5 text-black-50">All rounded serverless development including<br />
+                web, app, email, sms, payment and more.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid py-5">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-6">
+            <div class="p-5">
+              <h2 class="display-5 text-start fw-bold fs-2 text-dark">Hyra Group</h2>
+              <p class="text-start fw-light fs-5 text-black-50">
+                Hyra Group is a leading bus company that provides coach booking services to both corporate and
+                individual clients. With my expertise in technology, I was able to help the company create a
+                cutting-edge booking system that operates like Uber, accurately calculating fees based on multiple
+                factors such as bus type, tunnels, district, and rush hour. This complete solution included the
+                development of a user-friendly website, a convenient iOS and Android mobile app, seamless email and
+                payment integration, and more, to offer a seamless and efficient booking experience to their clients.
+              </p>
+              <p class="text-start fw-light fs-5 text-black-50">
+                <a class="btn" target="_blank" href="https://hyragroup.com"><i class="bi bi-link-45deg"></i>
+                  https://hyragroup.com</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6">
+            <img class="img-fluid mx-auto d-block" src="/images/project3.png" alt="Hyra Group">
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid py-5">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-6">
+            <img class="img-fluid mx-auto d-block" src="/images/project1.png" alt="CREATORadar">
+          </div>
+          <div class="col-12 col-sm-12 col-md-6">
+            <div class="p-5">
+              <h2 class="display-5 text-start fw-bold fs-2 text-dark">CREATORadar</h2>
+              <p class="text-start fw-light fs-5 text-black-50">
+                CREATORadar is a game-changing platform for YouTubers to connect with potential sponsors. This
+                innovative project integrates with Stripe Connect to facilitate cross-border online payments, making
+                it easier for YouTubers to monetize their content. With custom CMS and localization features, the
+                platform is equipped to cater to the needs of users from all corners of the world. The brand is
+                dedicated to providing a seamless and convenient sponsorship experience for YouTubers, empowering them
+                to grow their channels and reach their full potential.
+              </p>
+              <p class="text-start fw-light fs-5 text-black-50">
+                <a class="btn" target="_blank" href="https://creatoradar.com"><i class="bi bi-link-45deg"></i>
+                  https://creatoradar.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid py-5">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-6">
+            <div class="p-5">
+              <h2 class="display-5 fw-bold fs-2 text-dark">WSP (HK)</h2>
+              <p class="text-start fw-light fs-5 text-black-50">
+                WSP, a global leader in the construction industry, recently leveraged my expertise to digitalize their
+                slope inspection process. I developed a sophisticated system that streamlines data collection, enables
+                efficient master and section plan annotation, and generates comprehensive reports. This project
+                reflects my commitment to delivering innovative solutions that drive operational efficiency and
+                enhance the overall performance of businesses. WSP's adoption of this cutting-edge technology
+                demonstrates their commitment to staying ahead of the curve and delivering top-notch results to their
+                clients.
+              </p>
+              <p class="text-start fw-light fs-5 text-black-50">
+                <a class="btn" target="_blank" href="https://wsp-hk-slope.web.app"><i class="bi bi-link-45deg"></i>
+                  https://wsp-hk-slope.web.app</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6">
+            <img class="img-fluid mx-auto d-block" src="/images/project2.png" alt="WSP (HK)">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- here is the footer -->
+    <%- include ../partial/footer.ejs %>
+    <!-- here are the js script -->
+    <%- include ../partial/script.ejs %>
+  </body>
+</html>

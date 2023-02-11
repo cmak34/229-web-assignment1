@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- here is the head -->
+  <%- include ../partial/head.ejs %>
+  <body>
+    <!-- here is the header -->
+    <%- include ../partial/header.ejs %>
+    <!-- body of the page -->
+    <div class="bg-container container home">
+      <div class="row">
+        <div class="col-12 mb-4">
+          <%- include ../partial/banner.ejs %>
+        </div>
+      </div>
+      <div class="p-1">
+        <div class="container-fluid py-5">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-6">
+              <img class="img-fluid mx-auto d-block" src="/images/home-welcome.png" alt="Welcome message h-100">
+            </div>
+            <div class="col-12 col-sm-12 col-md-6">
+              <div class="p-4 h-100">
+                <h2 class="text-center display-5 text-start fw-bold fs-2 text-dark">Personal website of Hugo Mak</h2>
+                <p class="text-center text-start fw-light fs-5 text-black-50">Welcome to my personal website! I'm
+                  thrilled you're here. This is where I share my thoughts, ideas, and experiences with the world. Take
+                  a look around and feel free to reach out with any questions or comments. I hope you enjoy your
+                  visit!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-12 col-md-4 mb-4">
+          <div onclick="location.href='/about';" class="p-1 bg-light rounded-4 pointer h-100">
+            <div class="container-fluid py-5">
+              <img class="img-fluid mx-auto d-block" src="/images/home-about.png" alt="About Hugo Mak">
+              <h2 class="mt-4 display-5 text-center fw-bold fs-2 text-dark">About me</h2>
+              <p class="text-center fw-light fs-5 text-black-50">Self introduction of myself</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-12 col-md-4 mb-4">
+          <div onclick="location.href='/projects';" class="p-1 bg-light rounded-4 pointer h-100">
+            <div class="container-fluid py-5">
+              <img class="img-fluid mx-auto d-block" src="/images/home-projects.png"
+                alt="Previous Project of Hugo Mak">
+              <h2 class="mt-4 display-5 text-center fw-bold fs-2 text-dark">Projects</h2>
+              <p class="text-center fw-light fs-5 text-black-50">Examples of my previous works</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-12 col-md-4 mb-4">
+          <div onclick="location.href='/service';" class="p-1 bg-light rounded-4 pointer h-100">
+            <div class="container-fluid py-5">
+              <img class="img-fluid mx-auto d-block" src="/images/home-service.png" alt="Service of Hugo Mak">
+              <h2 class="mt-4 display-5 text-center fw-bold fs-2 text-dark">Services</h2>
+              <p class="text-center fw-light fs-5 text-black-50">that I provide to clients</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid py-5">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-6">
+            <div class="p-5 h-100">
+              <h2 class="display-5 text-center fw-bold fs-2 text-dark">Personal Mission</h2>
+              <div class="d-flex justify-content-center">
+                <p class="col-md-12 text-center fw-light fs-5 text-black-50">My personal mission is to constantly
+                  expand my knowledge and skills in the field of AI and technology to provide innovative solutions
+                  that enhance the user experience. As a lifelong learner and serial entrepreneur, I am committed to
+                  continuously growing and improving, both personally and professionally, to best serve my clients and
+                  achieve my goals.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6">
+            <img class="img-fluid mx-auto d-block" src="/images/home-mission.png" alt="Mission Statement h-100">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- here is the footer -->
+    <%- include ../partial/footer.ejs %>
+    <!-- here are the js script -->
+    <%- include ../partial/script.ejs %>
+  </body>
+</html>
