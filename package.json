@@ -1,13 +1,13 @@
 {
   "name": "express-porfolio-site",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "patch": "npm --no-git-tag-version version patch && say 'Update patch version'",
     "minor": "npm --no-git-tag-version version minor && say 'Update minor version'",
     "major": "npm --no-git-tag-version version major && say 'Update major version'",
     "devstart": "nodemon server",
-    "start": "node server"
+    "start": "pm2 start server.js --no-daemon"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
