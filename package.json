@@ -6,7 +6,8 @@
     "patch": "npm --no-git-tag-version version patch && say 'Update patch version'",
     "minor": "npm --no-git-tag-version version minor && say 'Update minor version'",
     "major": "npm --no-git-tag-version version major && say 'Update major version'",
-    "start": "nodemon server"
+    "devstart": "nodemon server",
+    "start": "node server"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
