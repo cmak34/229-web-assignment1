@@ -29,6 +29,27 @@
           <li>
             <a href="/contact" class="nav-link px-3 fs-5 link-secondary">Contact</a>
           </li>
+          <% if (!user) { %>
+            <li>
+              <a href="javascript:void(0)" class="nav-link px-3 fs-5 link-secondary" data-bs-toggle="modal" data-bs-target="#loginModal">
+                Login
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="nav-link px-3 fs-5 link-secondary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                Signup
+              </a>
+            </li>
+          <% } else { %>
+            <li>
+              <a href="/dashboard" class="nav-link px-3 fs-5 link-secondary">Dashboard</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="nav-link px-3 fs-5 link-secondary logout-btn">
+                Logout
+              </a>
+            </li>
+          <% } %>
         </ul>
       </div>
       <!-- mobile menu -->
@@ -37,24 +58,52 @@
           <div class="p-4">
             <ul class="list-unstyled text-center">
               <li class="mb-5">
-                <a class="btn" href="/home" class="fs-5">Home</a>
+                <a href="/home" class="fs-5 btn">Home</a>
               </li>
               <li class="mb-5">
-                <a class="btn" href="/about" class="fs-5">About me</a>
+                <a href="/about" class="fs-5 btn">About me</a>
               </li>
               <li class="mb-5">
-                <a class="btn" href="/projects" class="fs-5">Projects</a>
+                <a href="/projects" class="fs-5 btn">Projects</a>
               </li>
               <li class="mb-5">
-                <a class="btn" href="/service" class="fs-5">Service</a>
+                <a href="/service" class="fs-5 btn">Service</a>
               </li>
               <li class="mb-5">
-                <a class="btn" href="/contact" class="fs-5">Contact</a>
+                <a href="/contact" class="fs-5 btn">Contact</a>
               </li>
+              <% if (!user) { %>
+                <li class="mb-5">
+                  <a href="javascript:void(0)" class="fs-5 btn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    Login
+                  </a>
+                </li>
+                <li class="mb-5">
+                  <a href="javascript:void(0)" class="fs-5 btn" data-bs-toggle="modal" data-bs-target="#registerModal">
+                    Signup
+                  </a>
+                </li>
+              <% } else { %>
+                <li class="mb-5">
+                  <a href="/dashboard" class="fs-5 btn">Dashboard</a>
+                </li>
+                <li class="mb-5">
+                  <a href="javascript:void(0)" class="fs-5 btn logout-btn">
+                    Logout
+                  </a>
+                </li>
+              <% } %>
             </ul>
           </div>
         </div>
       </div>
+      <div class="mt-3" id="liveAlertPlaceholder"></div>
+      <% if (error && error != '') { %>
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <div><%= error %></div>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      <% } %>
     </div>
   </section>
 </header>

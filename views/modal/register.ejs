@@ -1,0 +1,43 @@
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+            <div class="container-fluid py-5">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6">
+                      <img class="img-fluid d-block w-100" src="/images/home-projects.png" alt="Register">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="float-end">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="clearfix"></div>
+                        <h1>Signup</h1>
+                        <div class="mt-3" id="registerAlertPlaceholder"></div>
+                        <form id="signupForm">
+                            <div class="input-group mb-3 input-group-lg">
+                              <span class="input-group-text" id="userIcon">
+                                <i class="bi bi-person-circle"></i>
+                              </span>
+                              <input type="text" id="username" class="form-control" placeholder="Username" aria-describedby="userIcon">
+                            </div>
+                            <div class="input-group mb-3 input-group-lg">
+                              <span class="input-group-text" id="passwordIcon">
+                                <i class="bi bi-key-fill"></i>
+                              </span>
+                              <input type="password" id="password" class="form-control" placeholder="password" aria-describedby="passwordIcon">
+                            </div>
+                            <div class="d-grid gap-2 mx-auto mb-4">
+                              <button type="submit" class="btn btn-lg btn-dark me-2 btn-submit">
+                                Sign up
+                              </button>
+                            </div>
+                            <p class="small text-center">Already registered, login <button type="button" class="btn btn-link btn-xs" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">here</button></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

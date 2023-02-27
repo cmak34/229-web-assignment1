@@ -1,0 +1,43 @@
+<div class="modal fade" id="businessContactModal" tabindex="-1" aria-labelledby="businessContactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+            <div class="container-fluid py-5">
+              <div class="float-end">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="clearfix"></div>
+              <h1>Business Contact Edit</h1>
+              <div class="mt-3" id="businessContactAlertPlaceholder"></div>
+              <form id="businessContactForm">
+                <input type="hidden" id="id">
+                <div class="mb-3">
+                  <label for="contactName" class="form-label">Contact Name</label>
+                  <input type="text" class="form-control form-control-lg" id="contactName" placeholder="Contact Name">
+                </div>
+                <div class="mb-3">
+                  <label for="contactNumber" class="form-label">Contact Number</label>
+                  <input type="text" class="form-control form-control-lg" id="contactNumber" placeholder="Contact Number">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control form-control-lg" id="email" placeholder="Email">
+                </div>
+                <div class="d-grid gap-2 mx-auto mb-4">
+                  <button type="submit" class="btn btn-lg btn-dark me-2 btn-submit">
+                    <span class="d-none spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span id="business-contact-button">
+                      Edit
+                    </span>
+                  </button>
+                  <button type="button" class="btn btn-lg me-2 btn-default" data-bs-dismiss="modal" aria-label="Close">
+                    <span class="d-none spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Cancel
+                  </button>
+                </div>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

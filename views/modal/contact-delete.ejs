@@ -1,0 +1,35 @@
+<div class="modal fade" id="businessContactDeleteModal" tabindex="-1" aria-labelledby="businessContactDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+            <div class="container-fluid py-5">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6">
+                  <img class="img-fluid d-block w-100" src="/images/home-about.png" alt="Login">
+                </div>
+                <div class="col-12 col-sm-12 col-md-6">
+                  <div class="float-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="clearfix"></div>
+                  <h1>Are you sure?</h1>
+                  <div class="mt-3" id="businessContactDeleteAlertPlaceholder"></div>
+                  <p>This cannot be undo!</p>
+                  <form id="businessContactDeleteForm">
+                    <input type="hidden" id="id">
+                    <button type="submit" class="btn btn-lg btn-danger me-2 btn-submit">
+                      <span class="d-none spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Delete
+                    </button>
+                    <button type="button" class="btn btn-lg me-2 btn-default" data-bs-dismiss="modal" aria-label="Close">
+                      <span class="d-none spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                      Cancel
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

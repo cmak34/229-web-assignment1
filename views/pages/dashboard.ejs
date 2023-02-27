@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- here is the head -->
+  <%- include ../partial/head.ejs %>
+  <body>
+    <!-- here is the header -->
+    <%- include ../partial/header.ejs %>
+    <!-- body of the page -->
+    <div class="bg-container container dashboard">
+      <div class="row mb-5">
+        <div class="col-12 col-sm-12 col-md-4">
+          <div class="card p-3 mb-3">
+            <div class="card-body text-center">
+              <img class="img-fluid mx-auto d-block mb-3" src="/images/home-welcome.png" alt="Welcome message h-100">
+              <% if (user) { %>
+                <p class="card-text">Welcome back!</p>
+                <h4 class="card-title mb-3"><%= user.displayName %></h4>
+                <a href="#" class="btn btn-dark logout-btn">Logout</a>
+              <% } %>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-8">
+          <h4>Business Contact</h4>
+          <div>
+            <a href="javascript:void(0)" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#businessContactModal">
+              <i class="bi bi-plus"></i> Add 
+            </a>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-start">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Contact Name</th>
+                  <th scope="col">Contact Number</th>
+                  <th scope="col">Email Address</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% for (var i = 0; i < contacts.length; i++) { %>
+                <tr>
+                  <td><%= i + 1 %></td>
+                  <th><%= contacts[i].contactName %></th>
+                  <td><%= contacts[i].contactNumber %></td>
+                  <td><%= contacts[i].email %></td>
+                  <td>
+                    <a href="javascript:void(0)" class="btn mb-1 btn-dark" data-bs-toggle="modal" data-bs-target="#businessContactModal" data-id="<%= contacts[i].id %>" data-name="<%= contacts[i].contactName %>" data-number="<%= contacts[i].contactNumber %>" data-email="<%= contacts[i].email %>">
+                      <i class="bi bi-pencil-square"></i> Edit 
+                    </a>
+                    <a href="javascript:void(0)" class="btn mb-1 btn-danger" data-bs-toggle="modal" data-bs-target="#businessContactDeleteModal" data-id="<%= contacts[i].id %>">
+                      <i class="bi bi-trash"></i> Delete 
+                    </a>
+                  </td>
+                </tr>
+                <% } %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- here is the business contact edit modal -->
+    <%- include ../modal/contact-edit.ejs %>
+    <%- include ../modal/contact-delete.ejs %>
+    <!-- here is the footer -->
+    <%- include ../partial/footer.ejs %>
+    <!-- here are the js script -->
+    <%- include ../partial/script.ejs %>
+  </body>
+</html>

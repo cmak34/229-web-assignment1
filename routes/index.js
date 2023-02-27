@@ -5,7 +5,7 @@ const constant = require("../config/constant")
 /**
  * Index page
  */
-router.get("/", (_req, res, _next) => {
+router.get("/", (req, res, _next) => {
   res.render("pages/index", {
     title: `${constant.siteName} | Home`,
     version: constant.version,
