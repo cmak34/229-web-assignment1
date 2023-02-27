@@ -14,12 +14,18 @@ function validatePassword(password) {
     return password.length >= 8;
 }
 
+/**
+ * API for logout
+ */
 router.post('/logout', (req, res, next) => {
     req.logout(() => {
         res.status(200).json({ success: true })
     });
 });
 
+/**
+ * API for login
+ */
 router.post('/login', (req, res, next) => {
     passport.authenticate('local-login', function (err, user, info) {
         if (err) { return next(err); }
@@ -40,6 +46,9 @@ router.post('/login', (req, res, next) => {
     })(req, res, next);
 });
 
+/**
+ * API for signup
+ */
 router.post('/signup', (req, res, next) => {
     const username = req.body.username?.trim()?.toLowerCase() || "";
     const password = req.body.password?.trim() || "";
@@ -93,6 +102,9 @@ router.post('/signup', (req, res, next) => {
     });
 });
 
+/**
+ * API for getting all the business contact
+ */
 router.get('/contact', (req, res, next) => {
     if (!req.isAuthenticated()) {
         return res.status(401).json({
@@ -118,6 +130,9 @@ router.get('/contact', (req, res, next) => {
     }
 });
 
+/**
+ * API for adding / editing business contact
+ */
 router.post('/contact', (req, res, next) => {
     const contactName = req.body.contactName?.trim() || "";
     const contactNumber = req.body.contactNumber?.trim() || "";
@@ -205,6 +220,9 @@ router.post('/contact', (req, res, next) => {
     }
 });
 
+/**
+ * API for deleting the business contact
+ */
 router.delete('/contact', (req, res, next) => {
     const id = req.body.id?.trim() || "";
     if (!req.isAuthenticated()) {
